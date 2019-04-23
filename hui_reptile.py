@@ -29,18 +29,22 @@ firstSoup = BeautifulSoup(firstRes.text, "lxml")
 
 # 处理每页的所有工程详情条目
 def soup(othersoup):
-    trs = firstSoup.select('tr')
+    trs = othersoup.select('tr')
     i = 1
+    # print(type(trs))
     for tr in trs:
-        name = firstSoup.select('#Name' + str(i) + '> a')
-        print(name)
+        name = othersoup.select('#Name' + str(i) + '> a')
+        # print(name)
         a = tr.select('tr > td:nth-child(4)')
-        print(a)
+        # print(a)
         b = tr.select('tr > td:nth-child(5)')
-        print(b)
+        # print(b)
         c = tr.select('tr > td:nth-child(6)')
-        print(c)
+        # print(c)
         i += 1
+        # if i == 17:
+        #     return
+
 # --------------------------------------------------------------
 
 #---------------------- # 通过检查网页元素发现每一条内容都在 tbody 里------------------
