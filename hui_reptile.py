@@ -59,7 +59,7 @@ soup(firstSoup)
 
 # 求总页数
 pages_List = firstSoup.select('div.jump.fl > span:nth-child(1)')
-# pagesListBar = pages_List.find('a').text
+# print(pages_List)
 total = str(pages_List[0])
 # totalPage = int(pages_List[0].split('共')[1].split('条')[0])
 reg = r'(\d{5})'
