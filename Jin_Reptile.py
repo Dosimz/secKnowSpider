@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import time
 import re
 
-basicUrl = "http://www.gzsggzyjyzx.cn/jygkjyjg/index.jhtml"
+basicUrl = "http://ggzy.guizhou.gov.cn/jygkjsgc/index.jhtml"
 # GET /jygkjsgc/index.jhtml HTTP/1.1
 # Host: www.gzsggzyjyzx.cn
 # Connection: keep-alive
@@ -39,7 +39,7 @@ firstSoup = BeautifulSoup(resFirst.text, "lxml")
 def soup(postsoup):
     table = postsoup.find(id = "listbox")
     # print(table)
-    a_all = table.find_all('a') #变成可遍历的数组
+    a_all = table.find_all("a") #变成可遍历的数组
     # print(a_all)
     for a in a_all:
         # print(a['href'])
